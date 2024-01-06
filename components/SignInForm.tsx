@@ -59,20 +59,36 @@ const SignInForm = (props: Props) => {
         Sign In Form
       </div>
       <div className="p-2 flex flex-col gap-2">
-        <Input label="Email" {...register("email")} errorMessage={errors.email?.message} />
+        <Input
+          label="Email"
+          {...register("email")}
+          errorMessage={errors.email?.message}
+        />
         <Input
           label="Password"
           {...register("password")}
           type={visiblePass ? "text" : "password"}
           errorMessage={errors.password?.message}
           endContent={
-            <button type="button" onClick={() => setVisiblePass((prev) => !prev)}>
-              {visiblePass ? <EyeSlashIcon className="w-4" /> : <EyeIcon className="w-4" />}
+            <button
+              type="button"
+              onClick={() => setVisiblePass((prev) => !prev)}
+            >
+              {visiblePass ? (
+                <EyeSlashIcon className="w-4" />
+              ) : (
+                <EyeIcon className="w-4" />
+              )}
             </button>
           }
         />
         <div className="flex items-center justify-center gap-2">
-          <Button color="primary" type="submit" disabled={isSubmitting} isLoading={isSubmitting}>
+          <Button
+            color="primary"
+            type="submit"
+            disabled={isSubmitting}
+            isLoading={isSubmitting}
+          >
             {isSubmitting ? "Signing In..." : "Sign In"}
           </Button>
           <Button as={Link} href="/auth/signup">

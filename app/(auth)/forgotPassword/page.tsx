@@ -1,4 +1,5 @@
 "use client";
+
 import { forgotPassword } from "@/lib/actions/authActions";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { zodResolver } from "@hookform/resolvers/zod";

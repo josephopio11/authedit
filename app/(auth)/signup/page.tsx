@@ -1,4 +1,4 @@
-import SignUpForm from "@/app/components/SignUpForm";
+import SignUpForm from "@/components/SignUpForm";
 import { Image, Link } from "@nextui-org/react";
 
 const SignupPage = () => {
